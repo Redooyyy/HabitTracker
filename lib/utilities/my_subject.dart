@@ -26,6 +26,7 @@ class MySubject extends StatelessWidget {
           children: [
             Center(
               child: Text(
+                textAlign: TextAlign.center,
                 subject.toString(),
                 style: TextStyle(fontSize: 15, fontFamily: 'Arial'),
               ),

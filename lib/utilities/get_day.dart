@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TimeTracker extends StatelessWidget {
-  const TimeTracker({Key? key}) : super(key: key);
+  TimeTracker({Key? key}) : super(key: key);
 
   String getWeekName() {
     final now = DateTime.now();
