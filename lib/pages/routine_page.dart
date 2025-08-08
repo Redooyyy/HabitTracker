@@ -41,6 +41,7 @@ class RoutinePage extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        //times
                         Row(
                           children: [
                             RoutineItem(week: "Day", height: 50, width: 120),
@@ -216,7 +217,7 @@ class RoutinePage extends StatelessWidget {
                                     : deefault,
                               ),
                               MySubject(
-                                subject: "CSE 2117\nRoom 213",
+                                subject: "CSE 2115\nRoom 225",
                                 color:
                                     dayName == 'Monday' &&
                                         isInTimeRange(10, 25, 11, 45)
@@ -281,7 +282,7 @@ class RoutinePage extends StatelessWidget {
                                     : deefault,
                               ),
                               MySubject(
-                                subject: "CSE 2115\nRoom 226",
+                                subject: "CSE2117\nRoom 225",
                                 color:
                                     dayName == 'Tuesday' &&
                                         isInTimeRange(15, 0, 16, 20)
@@ -305,7 +306,7 @@ class RoutinePage extends StatelessWidget {
                         Container(
                           padding: EdgeInsets.all(1),
                           decoration: BoxDecoration(
-                            color: backgroundActive,
+                            color: isCE() ? backgroundActive : null,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Row(
@@ -319,92 +320,149 @@ class RoutinePage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Row(
-                          children: [
-                            MySubject(subject: "EPE 2101", w8: course),
-                            MySubject(
-                              subject: "Engineering Professional Ethics",
-                              w8: courseTitle,
-                            ),
-                            MySubject(subject: "_____", w8: 200),
-                          ],
+                        //EPE
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: isEPE() ? backgroundActive : null,
+                          ),
+                          child: Row(
+                            children: [
+                              MySubject(subject: "EPE 2101", w8: course),
+                              MySubject(
+                                subject: "Engineering Professional Ethics",
+                                w8: courseTitle,
+                              ),
+                              MySubject(subject: "_____", w8: 200),
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            MySubject(subject: "HIST 2105", w8: course),
-                            MySubject(
-                              subject: "Bangladesh Studies",
-                              w8: courseTitle,
-                            ),
-                            MySubject(subject: "_____", w8: 200),
-                          ],
+                        //HIST
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: isHIST() ? backgroundActive : null,
+                          ),
+                          child: Row(
+                            children: [
+                              MySubject(subject: "HIST 2105", w8: course),
+                              MySubject(
+                                subject: "Bangladesh Studies",
+                                w8: courseTitle,
+                              ),
+                              MySubject(subject: "_____", w8: 200),
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            MySubject(subject: "CSE 2115", w8: course),
-                            MySubject(
-                              subject: "Object Oriented Programming",
-                              w8: courseTitle,
-                            ),
-                            MySubject(
-                              subject: "Md. Ajharul Islam Miraj",
-                              w8: 200,
-                            ),
-                          ],
+                        //CSE 2115
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: isCSE2115() ? backgroundActive : null,
+                          ),
+                          child: Row(
+                            children: [
+                              MySubject(subject: "CSE 2115", w8: course),
+                              MySubject(
+                                subject: "Object Oriented Programming",
+                                w8: courseTitle,
+                              ),
+                              MySubject(
+                                subject: "Md. Ajharul Islam Miraj",
+                                w8: 200,
+                              ),
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            MySubject(subject: "CSE 2116", w8: course),
-                            MySubject(
-                              subject: "Object Oriented Programming Laboratory",
-                              w8: courseTitle,
-                            ),
-                            MySubject(
-                              subject: "Md. Ajharul Islam Miraj",
-                              w8: 200,
-                            ),
-                          ],
+                        //CSE 2116
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: isCSE2116() ? backgroundActive : null,
+                          ),
+                          child: Row(
+                            children: [
+                              MySubject(subject: "CSE 2116", w8: course),
+                              MySubject(
+                                subject:
+                                    "Object Oriented Programming Laboratory",
+                                w8: courseTitle,
+                              ),
+                              MySubject(
+                                subject: "Md. Ajharul Islam Miraj",
+                                w8: 200,
+                              ),
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            MySubject(subject: "CSE 2111", w8: course),
-                            MySubject(
-                              subject: "Digital Logic Design",
-                              w8: courseTitle,
-                            ),
-                            MySubject(subject: "Mst. Shikha Moni", w8: 200),
-                          ],
+                        //CSE 2111
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: isCSE2111() ? backgroundActive : null,
+                          ),
+                          child: Row(
+                            children: [
+                              MySubject(subject: "CSE 2111", w8: course),
+                              MySubject(
+                                subject: "Digital Logic Design",
+                                w8: courseTitle,
+                              ),
+                              MySubject(subject: "Mst. Shikha Moni", w8: 200),
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            MySubject(subject: "CSE 2112", w8: course),
-                            MySubject(
-                              subject: "Digital Logic Design Laboratory",
-                              w8: courseTitle,
-                            ),
-                            MySubject(subject: "Mst. Shikha Moni", w8: 200),
-                          ],
+                        //CSE 2112
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: isCSE2112() ? backgroundActive : null,
+                          ),
+                          child: Row(
+                            children: [
+                              MySubject(subject: "CSE 2112", w8: course),
+                              MySubject(
+                                subject: "Digital Logic Design Laboratory",
+                                w8: courseTitle,
+                              ),
+                              MySubject(subject: "Mst. Shikha Moni", w8: 200),
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            MySubject(subject: "CSE 2117", w8: course),
-                            MySubject(
-                              subject: "Discrete Mathematics",
-                              w8: courseTitle,
-                            ),
-                            MySubject(subject: "Md. Al Amin Mridha", w8: 200),
-                          ],
+                        //CSE 2117
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: isCSE2117() ? backgroundActive : null,
+                          ),
+                          child: Row(
+                            children: [
+                              MySubject(subject: "CSE 2117", w8: course),
+                              MySubject(
+                                subject: "Discrete Mathematics",
+                                w8: courseTitle,
+                              ),
+                              MySubject(subject: "Md. Al Amin Mridha", w8: 200),
+                            ],
+                          ),
                         ),
-                        Row(
-                          children: [
-                            MySubject(subject: "MATH 2105", w8: course),
-                            MySubject(
-                              subject:
-                                  "Linear Algebra, Laplace Transformation and Fourier Analysis",
-                              w8: courseTitle,
-                            ),
-                            MySubject(subject: "_____", w8: 200),
-                          ],
+                        //MATH
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: isMATH() ? backgroundActive : null,
+                          ),
+                          child: Row(
+                            children: [
+                              MySubject(subject: "MATH 2105", w8: course),
+                              MySubject(
+                                subject:
+                                    "Linear Algebra, Laplace Transformation and Fourier Analysis",
+                                w8: courseTitle,
+                              ),
+                              MySubject(subject: "_____", w8: 200),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -438,7 +496,7 @@ class RoutinePage extends StatelessWidget {
     return now.isAfter(start) && now.isBefore(end);
   }
 
-  //CE
+  //CE logic
   bool isCE() {
     final String day = timeTracker.getWeekName();
     if (day == 'Saturday' && isInTimeRange(15, 0, 16, 20)) {
@@ -448,7 +506,7 @@ class RoutinePage extends StatelessWidget {
     }
   }
 
-  //EPE
+  //EPE logic
   bool isEPE() {
     if ((timeTracker.getWeekName() == 'Saturday' &&
             isInTimeRange(11, 50, 13, 10)) ||
@@ -460,11 +518,75 @@ class RoutinePage extends StatelessWidget {
     }
   }
 
-  //HIST
+  //HIST logic
   bool isHIST() {
     if (isInTimeRange(9, 0, 10, 20) &&
         (timeTracker.getWeekName() == 'Saturday' ||
             timeTracker.getWeekName() == 'Monday')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //CSE-2116 logic
+  bool isCSE2116() {
+    if (isInTimeRange(10, 25, 13, 10) &&
+        timeTracker.getWeekName() == 'Tuesday') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //CSE-2112 logic
+  bool isCSE2112() {
+    if (isInTimeRange(10, 20, 13, 10) &&
+        timeTracker.getWeekName() == 'Sunday') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //MATH logic
+  bool isMATH() {
+    if (isInTimeRange(13, 30, 14, 50) &&
+            (timeTracker.getWeekName() == 'Sunday') ||
+        timeTracker.getWeekName() == 'Tuesday') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //CSE 2115 logic
+  bool isCSE2115() {
+    if ((timeTracker.getWeekName() == 'Sunday' ||
+            timeTracker.getWeekName() == 'Monday') &&
+        (isInTimeRange(10, 25, 11, 45) || isInTimeRange(15, 0, 16, 20))) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //CSE 2117 logic
+  bool isCSE2117() {
+    if ((timeTracker.getWeekName() == 'Saturday' ||
+            timeTracker.getWeekName() == 'Tuesday') &&
+        (isInTimeRange(10, 25, 11, 45) || isInTimeRange(15, 0, 16, 20))) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  //CSE2111 logic
+  bool isCSE2111() {
+    if (isInTimeRange(9, 0, 10, 25) &&
+            (timeTracker.getWeekName() == 'Sunday') ||
+        timeTracker.getWeekName() == 'Tuesday') {
       return true;
     } else {
       return false;
